@@ -10,15 +10,16 @@ export class HomePage {
   pages =[
     {
       title :'categories',
-      url:'home/categories'
+      url:'/home/categories'
     },
     {
       title :'travels',
-      url:'home/travels'
+      url:'/home/travels'
     }
   ];
 
   selectedPath ='';
+  
   constructor(private router :Router) {
 
     this.router.events.subscribe((event:RouterEvent)=>{ //to catch the selected path
