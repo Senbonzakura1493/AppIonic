@@ -1,12 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Travels</ion-title>
-    <ion-buttons slot="start">
+    <ion-toolbar>
+      <ion-title>Travels</ion-title>
+      <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-
-</ion-content>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+     
+    <ion-card *ngFor="let trav of travels" [routerLink]="['/travels']">
+        <ion-card-header>
+          <ion-card-title>{{ trav.destination }}</ion-card-title>
+          <ion-card-subtitle>{{ trav.title }}</ion-card-subtitle>
+        </ion-card-header>
+    </ion-card>
+        
+  </ion-content>
+  

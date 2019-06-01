@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TravelServiceService} from 'src/app/services/travel.service'
 
 @Component({
   selector: 'app-travels',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TravelsPage implements OnInit {
 
-  constructor() { }
+  travels =[];
+  constructor(private travelService: TravelServiceService) { }
 
   ngOnInit() {
+    this.travels = this.travelService.getTravels();
   }
 
 }
