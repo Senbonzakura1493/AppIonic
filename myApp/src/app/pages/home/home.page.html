@@ -3,9 +3,12 @@
     <ion-header>
       <ion-toolbar>
         <ion-title>Home</ion-title>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
       </ion-toolbar>
     </ion-header>
-    <ion-content>
+    <ion-content padding>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of pages " >
             <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath === p.url">
