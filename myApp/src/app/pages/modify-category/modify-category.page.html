@@ -1,27 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-card>
-        <ion-card-header>
-          <ion-card-title>Modify category : {{category.id}}</ion-card-title>
-        </ion-card-header>    
-        <ion-card-content>
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                  <form (ngSubmit)="onSubmit()">
-                    <div class="form-group">
-                      <label name="name">
-                        Category Name
-                      </label>
-                      <input type="text" id="name" class="form-control is-valid" [(ngModel)]="category.name" name="name" >
-                    </div>
-                    <ion-button color="primary" size="small" (click)="modify()">Modify</ion-button>
-                  </form>
-                </div>
-              </div>
-        </ion-card-content>
-      </ion-card>
+    <ion-title>Modification</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Modify category : {{category.id}}</ion-card-title>
+    </ion-card-header>    
+    <ion-card-content>
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label name="name">
+                    Category Name
+                  </label>
+                  <input type="text" id="name" class="form-control is-valid" [(ngModel)]="category.name" name="name" >
+                </div>
+                <ion-button color="primary" size="small" (click)="modify()">Modify</ion-button>
+              </form>
+            </div>
+          </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
