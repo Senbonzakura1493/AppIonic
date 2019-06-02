@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TravelServiceService} from 'src/app/services/travel.service'
 
+
 @Component({
   selector: 'app-travels',
   templateUrl: './travels.page.html',

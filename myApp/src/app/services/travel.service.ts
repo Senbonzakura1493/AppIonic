@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Travel } from 'src/app/classes/travel';
 import { Category } from 'src/app/classes/category';
+import { CategoryServiceService } from 'src/app/services/category.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class TravelServiceService {
     new Category(1, "Aventure","La vie est une aventure audacieuse"),
     new Category(2, "Arts","L'art est éternel"),
     new Category(3, "Plage et soleil","Life is better at the beach")
-  ];
+  ]
 
   private travels: Travel[] = [
     new Travel(1,"Les pyramides mayas !","Mexique","test1","test1","test1",this.categories[0]),
@@ -21,9 +22,11 @@ export class TravelServiceService {
     new Travel(3,"Des plages magnifiques !", "Thailande","test3","test3","test3",this.categories[2])
   ];
 
-  constructor() { }
+  constructor() {
 
-  getTravels(): Travel[] {
+   }
+
+  getTravels(): Travel[] { 
     return this.travels;
   }
 

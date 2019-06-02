@@ -1,9 +1,62 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>modifyTravel</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-card>
+          <ion-card-header>
+            <ion-card-title>Modify travel : {{travel.id}}</ion-card-title>
+          </ion-card-header>    
+          <ion-card-content>
+              <div class="row">
+                  <div class="col-sm-8 col-sm-offset-2">
+                    <form (ngSubmit)="onSubmit()">
+                      <div class="form-group">
+                        <ion-item>
+                        <ion-label >
+                          Title:
+                        </ion-label>
+                        <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.title" name="title" ></ion-input>
+                        </ion-item>
+                        <ion-item>
+                        <ion-label >
+                            Destination :
+                          </ion-label>
+                          <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.destination" name="destination" ></ion-input>
+                        </ion-item>
+                        <ion-item> 
+                          <ion-label >
+                              Resume :
+                            </ion-label>
+                          <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.resume" name="resume" ></ion-input>
+                        </ion-item>
+                        <ion-item> 
+                          <ion-label >
+                              DateTime :
+                            </ion-label>
+                          <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.dateTime" name="dateTime" ></ion-input>
+                        </ion-item>                            
+                          <ion-item> 
+                          <ion-label >
+                              Places to visit :
+                            </ion-label>
+                          <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.placeToVisit" name="placeToVisit" ></ion-input>
+                        </ion-item>
+                          <ion-item> 
+                          <ion-label name="category">
+                              Category :
+                            </ion-label>
+                            <select class="form-control is-valid" [(ngModel)]="travel.category" name="category">
+                                <option *ngFor="let category of categories" [ngValue]="category.name">{{ category.name }}</option>
+                            </select>
+                          </ion-item>
+                        </div>
+                      <ion-button color="primary" size="small" (click)="modify()">Modify</ion-button>
+                    </form>
+                  </div>
+                </div>
+          </ion-card-content>
+        </ion-card>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+  
+  </ion-content>
+  

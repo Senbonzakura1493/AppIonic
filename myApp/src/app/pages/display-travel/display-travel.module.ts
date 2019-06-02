@@ -11,7 +11,10 @@ const routes: Routes = [
   {
     path: '',
     component: DisplayTravelPage
-  }
+  },
+  { 
+    path: 'modifyTravel/:id', 
+    loadChildren: '../modify-travel/modify-travel.module#ModifyTravelPageModule' },
 ];
 
 @NgModule({
