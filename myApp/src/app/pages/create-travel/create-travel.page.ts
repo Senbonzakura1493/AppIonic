@@ -5,15 +5,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryServiceService } from 'src/app/services/category.service';
 import { TravelServiceService } from 'src/app/services/travel.service';
 @Component({
-  selector: 'app-modify-travel',
-  templateUrl: './modify-travel.page.html',
-  styleUrls: ['./modify-travel.page.scss'],
+  selector: 'app-create-travel',
+  templateUrl: './create-travel.page.html',
+  styleUrls: ['./create-travel.page.scss'],
 })
-export class ModifyTravelPage implements OnInit {
-  public travelId: number;
+export class CreateTravelPage implements OnInit {
   public travel: Travel;
   public categories : Category[];
-  public updatedTravel: Travel;
   
   constructor(private route: ActivatedRoute, 
     private categoryService: CategoryServiceService,
@@ -22,17 +20,10 @@ export class ModifyTravelPage implements OnInit {
 
   ngOnInit() {
     this.categories = this.categoryService.getCategories();
-    this.travelId = Number(this.route.snapshot.paramMap.get('id'));
-    this.travel = this.travelService.getTravel(this.travelId);
     
   }
-
-  modify() {
-    this.updatedTravel = new Travel(this.travel.id, 
-                                        this.travel.title, 
-                                        this.travel.destination,this.travel.resume,this.travel.dateTime,this.travel.placeToVisit,this.travel.category);
-    this.travelService.putTravel(this.updatedTravel);
-
+  add() {
+    this.travelService.postTravel(this.travel);
     this.router.navigateByUrl('/home/travels');
   }
 

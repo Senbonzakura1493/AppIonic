@@ -5,22 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TravelsPage } from './travels.page';
+import { CreateTravelPage } from './create-travel.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: TravelsPage
-  },
-  { 
-    path: 'displaytravel/:id', 
-    loadChildren: '../display-travel/display-travel.module#DisplayTravelPageModule' 
-  },
-    
-  { path: 'createTravel', 
-  loadChildren: '../create-travel/create-travel.module#CreateTravelPageModule' 
-  },
-
+    component: CreateTravelPage
+  }
 ];
 
 @NgModule({
@@ -30,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [TravelsPage]
+  declarations: [CreateTravelPage]
 })
-export class TravelsPageModule {}
+export class CreateTravelPageModule {}

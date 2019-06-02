@@ -10,7 +10,7 @@
           </ion-card-header>    
           <ion-card-content>
               <div class="row">
-                  <div class="col-sm-8 col-sm-offset-2">
+                  <div >
                     <form (ngSubmit)="onSubmit()">
                       <div class="form-group">
                         <ion-item>
@@ -50,9 +50,10 @@
                                 {{ category.name }}
                               </ion-select-option>
                             </ion-select>
-                        </ion-item>
+                          </ion-item>
                         </div>
-                      <ion-button color="primary" size="small" (click)="modify()">Modify</ion-button>
+                      <ion-button color="primary" size="small" (click)="add()">Add</ion-button>
+                      <ion-button color="danger" [routerLink]="['/travels']">Cancel</ion-button>
                     </form>
                   </div>
                 </div>
