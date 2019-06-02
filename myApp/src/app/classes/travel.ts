@@ -11,7 +11,7 @@ export class Travel {
 
     public category: Category;
 
-    constructor(id: number, title: string, destination : string,public resume: string,
+    constructor(id: number, title: string, destination : string,resume: string,
        dateTime: string,placeToVisit : string,category: Category)
     {
         this.id = id;

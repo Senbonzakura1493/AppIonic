@@ -9,7 +9,7 @@
 
 <ion-content padding>
    
-  <ion-card *ngFor="let cat of categories" [routerLink]="['/categories']">
+  <ion-card *ngFor="let cat of categories" [routerLink]="['displayCategory/',cat.id]">
       <ion-card-header>
         <ion-card-title>{{ cat.name }}</ion-card-title>
       </ion-card-header>

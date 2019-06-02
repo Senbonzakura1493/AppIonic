@@ -5,16 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CategoriesPage } from './categories.page';
+import { DisplayCategoryPage } from './display-category.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CategoriesPage
-  },
-  { 
-    path: 'displayCategory/:id', 
-    loadChildren: '../display-category/display-category.module#DisplayCategoryPageModule' },
+    component: DisplayCategoryPage
+  }
 ];
 
 @NgModule({
@@ -24,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CategoriesPage]
+  declarations: [DisplayCategoryPage]
 })
-export class CategoriesPageModule {}
+export class DisplayCategoryPageModule {}

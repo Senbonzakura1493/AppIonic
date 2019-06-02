@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>category details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ category.name }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+          {{ category.description }}
+          <div>
+            <ion-button color="danger" size="small" (click)="delete(category.id)">Delete</ion-button>
+          </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  

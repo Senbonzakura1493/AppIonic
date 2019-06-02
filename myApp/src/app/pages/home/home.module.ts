@@ -22,6 +22,7 @@ const routes : Routes =[
         loadChildren: '../travels/travels.module#TravelsPageModule' 
       
       },
+      
     ]
   },
 
