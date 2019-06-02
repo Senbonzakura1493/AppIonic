@@ -52,6 +52,7 @@ export class ModifyCategoryPage implements OnInit {
       });     
     toast.present();   
   }
+  
   async failMessage() {    
     const toast = await this.toastController.create({      
        message: 'Oups! Could not modify the category ! Verify your entries ',       
