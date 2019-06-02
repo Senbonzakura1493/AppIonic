@@ -17,9 +17,9 @@ const routes: Routes = [
     loadChildren: '../display-travel/display-travel.module#DisplayTravelPageModule' 
   },
     
-  { path: 'createTravel', 
-  loadChildren: '../create-travel/create-travel.module#CreateTravelPageModule' 
-  },
+  { 
+    path: 'create-travel', 
+    loadChildren: '../create-travel/create-travel.module#CreateTravelPageModule' },
 
 ];
 

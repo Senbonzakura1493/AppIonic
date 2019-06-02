@@ -30,7 +30,7 @@ export class ModifyTravelPage implements OnInit {
   modify() {
     this.updatedTravel = new Travel(this.travel.id, 
                                         this.travel.title, 
-                                        this.travel.destination,this.travel.resume,this.travel.dateTime,this.travel.placeToVisit,this.travel.category);
+                                        this.travel.destination,this.travel.resume,this.travel.dateTime,this.travel.placeToVisit,this.travel.category.id);
     this.travelService.putTravel(this.updatedTravel);
 
     this.router.navigateByUrl('/home/travels');

@@ -1,64 +1,56 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>Modification</ion-title>
+      <ion-title>Create a new travel</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-      <ion-card>
-          <ion-card-header>
-            <ion-card-title>Modify travel : {{travel.id}}</ion-card-title>
-          </ion-card-header>    
-          <ion-card-content>
-              <div class="row">
-                  <div >
-                    <form (ngSubmit)="onSubmit()">
-                      <div class="form-group">
-                        <ion-item>
-                        <ion-label >
-                          Title:
-                        </ion-label>
-                        <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.title" name="title" ></ion-input>
-                        </ion-item>
-                        <ion-item>
-                        <ion-label >
-                            Destination :
-                          </ion-label>
-                          <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.destination" name="destination" ></ion-input>
-                        </ion-item>
-                        <ion-item> 
-                          <ion-label >
-                              Resume :
-                            </ion-label>
-                          <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.resume" name="resume" ></ion-input>
-                        </ion-item>
-                        <ion-item> 
-                          <ion-label >
-                              DateTime :
-                            </ion-label>
-                          <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.dateTime" name="dateTime" ></ion-input>
-                        </ion-item>                            
-                          <ion-item> 
-                          <ion-label >
-                              Places to visit :
-                            </ion-label>
-                          <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.placeToVisit" name="placeToVisit" ></ion-input>
-                        </ion-item>
-                        <ion-item>
-                            <ion-label>Category</ion-label>
-                            <ion-select placeholder="Select category" [(ngModel)]="travel.category">
-                              <ion-select-option *ngFor="let category of categories" [value]="category">
-                                {{ category.name }}
-                              </ion-select-option>
-                            </ion-select>
-                          </ion-item>
-                        </div>
-                      <ion-button color="primary" size="small" (click)="add()">Add</ion-button>
-                      <ion-button color="danger" [routerLink]="['/travels']">Cancel</ion-button>
-                    </form>
-                  </div>
-                </div>
-          </ion-card-content>
-        </ion-card>
-  
-  </ion-content>
-  
+    <ion-content>
+        <ion-card>
+            <ion-item>
+            <ion-label >
+              Title:
+            </ion-label>
+            <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.title" name="title" ></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label >
+                    Destination :
+                  </ion-label>
+                  <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.destination" name="destination" ></ion-input>
+            </ion-item>
+
+            <ion-item> 
+                <ion-label >
+                    Resume :
+                  </ion-label>
+                <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.resume" name="resume" ></ion-input>
+            </ion-item>
+            <ion-item> 
+                <ion-label >
+                    DateTime :
+                  </ion-label>
+                <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.dateTime" name="dateTime" ></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label >
+                Places to visit :
+                </ion-label>
+              <ion-input type="text"  class="form-control is-valid" [(ngModel)]="travel.placeToVisit" name="placeToVisit" ></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Category</ion-label>
+                <ion-select >
+                  <ion-select-option *ngFor="let category of categories" [value]="category">
+                    {{ category.name }}
+                  </ion-select-option>
+                </ion-select>
+            </ion-item>
+            <div>
+            <ion-button color="primary" size="small" (click)="modify()">Modify</ion-button>
+            <ion-button color="danger" size="small" [routerLink]="['/home/travels']" >Cancel</ion-button>
+          </div>
+
+  </ion-card>
+
+</ion-content>
