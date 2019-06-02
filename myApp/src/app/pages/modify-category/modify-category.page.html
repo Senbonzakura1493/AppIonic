@@ -14,9 +14,13 @@
               <form (ngSubmit)="onSubmit()">
                 <div class="form-group">
                   <label name="name">
-                    Category Name
+                    Category Name :
                   </label>
-                  <input type="text" id="name" class="form-control is-valid" [(ngModel)]="category.name" name="name" >
+                  <input required type="text" class="form-control is-valid" [(ngModel)]="category.name" name="name" >
+                  <label name="name">
+                      Category Description : 
+                    </label>
+                    <input required type="text"  class="form-control is-valid" [(ngModel)]="category.description" name="description" >
                 </div>
                 <ion-button color="primary" size="small" (click)="modify()">Modify</ion-button>
               </form>
