@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Travel details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ trav.destination }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+          {{ trav.resume }}
+          <div>
+            <ion-button color="danger" size="small" (click)="delete(trav.id)">Delete</ion-button>
+          </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  

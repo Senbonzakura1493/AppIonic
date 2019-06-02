@@ -9,7 +9,7 @@
   
   <ion-content padding>
      
-    <ion-card *ngFor="let trav of travels" [routerLink]="['/travels']">
+    <ion-card *ngFor="let trav of travels" [routerLink]="['displaytravel/',trav.id]">
         <ion-card-header>
           <ion-card-title>{{ trav.destination }}</ion-card-title>
           <ion-card-subtitle>{{ trav.title }}</ion-card-subtitle>
