@@ -36,7 +36,7 @@ export class CreateCategoryPage implements OnInit {
   async succesMessage() {    
     const toast = await this.toastController.create({      
        message: 'Category added successfully !',       
-       duration: 2000,       
+       duration: 4000,       
        color: "success"     
       });     
     toast.present();   

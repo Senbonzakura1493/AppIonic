@@ -29,7 +29,7 @@
                           <ion-label >
                               Resume :
                             </ion-label>
-                          <ion-input type="text"  [(ngModel)]="travel.resume" name="resume" ></ion-input>
+                          <ion-input type="textarea"  [(ngModel)]="travel.resume" name="resume" ></ion-input>
                         </ion-item>
                         <ion-item> 
                           <ion-label >
@@ -45,7 +45,7 @@
                         </ion-item>
                         <ion-item>
                             <ion-label>Category</ion-label>
-                            <ion-select placeholder="Select category" [(ngModel)]="travel.category">
+                            <ion-select  [(ngModel)]="travel.category" name="category">
                               <ion-select-option *ngFor="let category of categories" [value]="category">
                                 {{ category.name }}
                               </ion-select-option>

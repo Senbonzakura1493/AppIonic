@@ -40,8 +40,8 @@
 
             <ion-item>
                 <ion-label>Category</ion-label>
-                <ion-select >
-                  <ion-select-option *ngFor="let category of categories" [value]="category">
+                <ion-select [(ngModel)]="travel.category" name="category" >
+                  <ion-select-option *ngFor="let category of categories"   [value]="category">
                     {{ category.name }}
                   </ion-select-option>
                 </ion-select>

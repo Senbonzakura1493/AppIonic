@@ -12,7 +12,7 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./create-travel.page.scss'],
 })
 export class CreateTravelPage implements OnInit {
-  public travel = new Travel(1,'','','','','',1); //default values
+  public travel = new Travel(1,'','','','','',0); //default values
   public categories : Category[];
   
   constructor(private route: ActivatedRoute, 
