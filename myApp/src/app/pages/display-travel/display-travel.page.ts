@@ -25,7 +25,7 @@ export class DisplayTravelPage implements OnInit {
   delete(id: number) {
     try {
       this.travelService.deleteTravel(id);
-      this.router.navigateByUrl('travels');
+      this.router.navigateByUrl('home/travels');
       this.succesMessage();
     }
     catch{
