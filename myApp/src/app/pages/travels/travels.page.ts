@@ -15,4 +15,5 @@ export class TravelsPage implements OnInit {
     this.travels = this.travelService.getTravels();
   }
 
+  
 }

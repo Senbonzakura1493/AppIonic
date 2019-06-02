@@ -23,7 +23,7 @@ export class DisplayTravelPage implements OnInit {
   
   delete(id: number) {
     this.travelService.deleteTravel(id);
-    this.router.navigateByUrl('/travels');
+    this.router.navigateByUrl('travels');
   }
 
 }

@@ -41,13 +41,13 @@ export class TravelServiceService {
   deleteTravel(id: number) {
     this.travels.forEach((travel, i) => {
       if (travel.id === id) {
-        this.categories.splice(i, 1);
+        this.travels.splice(i, 1);
       }
     });
   }
 
   postTravel(newTravel: Travel) {
-    this.categories.forEach((travel, i) => {
+    this.travels.forEach((travel, i) => {
       if (travel.id == newTravel.id) {
         this.travels[i] = newTravel;
       }

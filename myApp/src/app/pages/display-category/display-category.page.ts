@@ -21,6 +21,9 @@ export class DisplayCategoryPage implements OnInit {
     this.category = this.categoryService.getCategory(this.categoryId);
   }
   
-  
+  delete(id: number) {
+    this.categoryService.deleteCategory(id);
+    this.router.navigateByUrl('categories');
+  }
 
 }
