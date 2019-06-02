@@ -38,7 +38,7 @@ export class CategoryServiceService {
     });
   }
 
-  postCategory(newCategory: Category) {
+  putCategory(newCategory: Category) {
     this.categories.forEach((category, i) => {
       if (category.id == newCategory.id) {
         this.categories[i] = newCategory;
@@ -46,7 +46,7 @@ export class CategoryServiceService {
     });
   }
 
-  putCategory(newCategory: Category) {
+  postCategory(newCategory: Category) {
     this.categories.push(newCategory);
     this.Id ++; 
   }

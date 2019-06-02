@@ -5,16 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DisplayCategoryPage } from './display-category.page';
+import { ModifyCategoryPage } from './modify-category.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: DisplayCategoryPage
-  },
-  { 
-    path: 'modifyCategory/:id', 
-    loadChildren: '../modify-category/modify-category.module#ModifyCategoryPageModule' },
+    component: ModifyCategoryPage
+  }
 ];
 
 @NgModule({
@@ -24,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [DisplayCategoryPage]
+  declarations: [ModifyCategoryPage]
 })
-export class DisplayCategoryPageModule {}
+export class ModifyCategoryPageModule {}

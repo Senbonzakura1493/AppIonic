@@ -46,7 +46,7 @@ export class TravelServiceService {
     });
   }
 
-  postTravel(newTravel: Travel) {
+  putTravel(newTravel: Travel) {
     this.travels.forEach((travel, i) => {
       if (travel.id == newTravel.id) {
         this.travels[i] = newTravel;
@@ -54,7 +54,7 @@ export class TravelServiceService {
     });
   }
 
-  putTravel(newTravel: Travel) {
+  postTravel(newTravel: Travel) {
     this.travels.push(newTravel);
     this.Id ++; 
   }

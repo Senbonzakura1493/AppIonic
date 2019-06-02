@@ -5,6 +5,8 @@ const routes: Routes = [
   { 
     path:'', loadChildren: './pages/home/home.module#HomePageModule' },
   
+  { path: 'modify-travel', loadChildren: './pages/modify-travel/modify-travel.module#ModifyTravelPageModule' },
+  
 ];
 
 @NgModule({
