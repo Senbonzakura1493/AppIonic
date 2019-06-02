@@ -13,15 +13,19 @@
             <div class="col-sm-8 col-sm-offset-2">
               <form (ngSubmit)="onSubmit()">
                 <div class="form-group">
+                  <ion-item>
                   <label name="name">
                     Category Name :
                   </label>
-                  <input required type="text" class="form-control is-valid" [(ngModel)]="category.name" name="name" >
+                  <ion-input required type="text" class="form-control is-valid" [(ngModel)]="category.name" name="name" ></ion-input>
+                  </ion-item>
+                  <ion-item>
                   <label name="name">
                       Category Description : 
                     </label>
-                    <input required type="text"  class="form-control is-valid" [(ngModel)]="category.description" name="description" >
-                </div>
+                    <ion-input required type="text"  class="form-control is-valid" [(ngModel)]="category.description" name="description" ></ion-input>
+                  </ion-item>
+                  </div>
                 <ion-button color="primary" size="small" (click)="modify()">Modify</ion-button>
               </form>
             </div>
